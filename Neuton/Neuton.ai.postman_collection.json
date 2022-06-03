@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "b61a36e4-78b4-4483-9b39-8aebc453de02",
+		"name": "Neuton.ai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3525131"
+	},
+	"item": [
+		{
+			"name": "POST JSON data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": \"{Temperature;Barometer;Humidity;Gas;TAG\\n22.06;127724;58;12050;Indoor_prevision\\n22.06;27723;58;12050;Indoor_prevision\\n22.06;127723;58;6560;Indoor_prevision\\n22.06;127726;58;6560;Indoor_prevision\\n22.06;127724;58;6560;Indoor_prevision\\n22.06;127722;58;6560;Indoor_prevision\\n22.06;127722;58;6572;Indoor_prevision\\n22.06;127725;58;6572;Indoor_prevision\\n22.06;127725;58;6572;Indoor_prevision\\n22.06;127725;58;6572;Indoor_prevision}\\n\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://solution.neuton.ai/fc8fab7c-af43-4e33-bbb0-1bc1b3ded49c/v2/predict",
+					"protocol": "https",
+					"host": [
+						"solution",
+						"neuton",
+						"ai"
+					],
+					"path": [
+						"fc8fab7c-af43-4e33-bbb0-1bc1b3ded49c",
+						"v2",
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CSV file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/furio/dev/nicla-server/previsions/Outdoor_prevision-2-6-2022_12-6-6.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://solution.neuton.ai/fc8fab7c-af43-4e33-bbb0-1bc1b3ded49c/v2/predict/file",
+					"protocol": "https",
+					"host": [
+						"solution",
+						"neuton",
+						"ai"
+					],
+					"path": [
+						"fc8fab7c-af43-4e33-bbb0-1bc1b3ded49c",
+						"v2",
+						"predict",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET UUID status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://solution.neuton.ai/fc8fab7c-af43-4e33-bbb0-1bc1b3ded49c/v2/predict/status/d8af6618-e75b-4ed3-b2e9-248f5d363cd2",
+					"protocol": "https",
+					"host": [
+						"solution",
+						"neuton",
+						"ai"
+					],
+					"path": [
+						"fc8fab7c-af43-4e33-bbb0-1bc1b3ded49c",
+						"v2",
+						"predict",
+						"status",
+						"d8af6618-e75b-4ed3-b2e9-248f5d363cd2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET UUID results",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://solution.neuton.ai/fc8fab7c-af43-4e33-bbb0-1bc1b3ded49c/v2/predict/result/d8af6618-e75b-4ed3-b2e9-248f5d363cd2",
+					"protocol": "https",
+					"host": [
+						"solution",
+						"neuton",
+						"ai"
+					],
+					"path": [
+						"fc8fab7c-af43-4e33-bbb0-1bc1b3ded49c",
+						"v2",
+						"predict",
+						"result",
+						"d8af6618-e75b-4ed3-b2e9-248f5d363cd2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
